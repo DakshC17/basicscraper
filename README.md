@@ -26,3 +26,20 @@ This project is a **powerful dynamic web scraping tool** built using **Streamlit
 ```bash
 git clone https://github.com/your-username/dynamic-web-scraper.git
 cd dynamic-web-scraper
+
+
+### 2. Create and activate a virtual environment
+
+python -m venv webscraper-env
+source webscraper-env/bin/activate  
+On windows: .\webscraper-env\Scripts\activate
+
+
+### 3. Install dependencies
+
+pip install -r requirements.txt
+
+
+### 4. Run the Streamlit app
+
+streamlit run app.py
