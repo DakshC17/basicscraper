@@ -10,7 +10,10 @@ import json
 import re
 import random
 
-# User agents list
+# User agents list defined to avoid detection
+# This list can be expanded with more user agents for better randomness
+# Note: The user agents should be updated periodically to avoid detection
+# as websites may block known user agents
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36",
