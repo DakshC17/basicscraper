@@ -113,15 +113,15 @@ def extract_products(soup):
         if len(text.split()) < 5:
             continue
             
-        product = {
-            "title": "",
-            "brand": "",
-            "price": "",
-            "quantity": "",
-            "description": "",
-            "url": "",
-            "image_url": ""
-        }
+        # product = {
+        #     "title": "",
+        #     "brand": "",
+        #     "price": "",
+        #     "quantity": "",
+        #     "description": "",
+        #     "url": "",
+        #     "image_url": ""
+        # }
         
         # Title detection
         title_element = c.find(["h1", "h2", "h3", "h4", "strong"]) or c.find(class_=lambda c: c and "title" in c.lower() if c else False)
@@ -181,14 +181,14 @@ def extract_articles(soup):
     
     if main_article:
         # Single article page
-        article = {
-            "title": "",
-            "author": "",
-            "published_date": "",
-            "content": "",
-            "summary": "",
-            "image_url": ""
-        }
+        # article = {
+        #     "title": "",
+        #     "author": "",
+        #     "published_date": "",
+        #     "content": "",
+        #     "summary": "",
+        #     "image_url": ""
+        # }
         
         # Title
         title_element = main_article.find(["h1", "h2"]) or soup.find(["h1", "h2"])
@@ -234,15 +234,15 @@ def extract_articles(soup):
             # Fallback to find elements with headlines
             article_containers = soup.find_all(lambda tag: tag.name in ["div", "li"] and tag.find(["h2", "h3", "h4"]))
         
-        for container in article_containers:
-            article = {
-                "title": "",
-                "author": "",
-                "published_date": "",
-                "summary": "",
-                "url": "",
-                "image_url": ""
-            }
+        # for container in article_containers:
+        #     article = {
+        #         "title": "",
+        #         "author": "",
+        #         "published_date": "",
+        #         "summary": "",
+        #         "url": "",
+        #         "image_url": ""
+        #     }
             
             # Title
             title_element = container.find(["h1", "h2", "h3", "h4"])
